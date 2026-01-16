@@ -1,63 +1,65 @@
-# 📊 End-to-End Customer Behavior Data Analysis
-## 📌 Project Overview
+📊 End-to-End Customer Behavior Data Analysis
+📌 Project Overview
 
 This project demonstrates a complete end-to-end data analytics workflow using real-world customer behavior data.
-Instead of learning tools in isolation, the goal was to understand how each stage of analytics connects in a business context—from problem definition to insights and reporting.
+Instead of learning tools in isolation, the goal was to understand how each stage of analytics connects in a business context — from problem definition to insights and reporting.
 
-The project follows the full pipeline:
+Analytics Pipeline Followed
 
 Business Problem → Raw Data → Cleaning & Feature Engineering → Database Storage → SQL Analysis → Visualization → Insights
 
-# 🧠 1. Business Problem Definition
+🧠 1. Business Problem Definition
 
 Businesses often face challenges in understanding customer behavior and performance drivers.
 
 This project focuses on answering key business questions such as:
 
-- Which products perform best based on customer ratings?
+Which products perform best based on customer ratings?
 
-- Which customer age groups generate the most revenue?
+Which customer age groups generate the most revenue?
 
-- How does subscription status affect customer distribution?
+How does subscription status affect customer distribution?
 
-- What purchasing patterns emerge across product categories?
+What purchasing patterns emerge across product categories?
 
-- Clearly defining these questions helped guide every technical decision in the analysis.
+Clearly defining these questions helped guide every technical decision in the analysis.
 
-# 🗂️ 2. Dataset Overview (Raw Data)
+🗂️ 2. Dataset Overview (Raw Data)
 
 The dataset represents customer behavior data, including:
 
-- Customer demographics (age, gender)
+Customer demographics (age, gender)
 
-- Product and category information
+Product and category information
 
-- Purchase frequency
+Purchase frequency
 
-- Review ratings
+Review ratings
 
-- Subscription status
+Subscription status
 
-- Payment and shipping methods
+Payment and shipping methods
 
-- Initial Data Challenges:
+Initial Data Challenges
 
-- Missing values
+Missing values
 
-- Categorical variables in text format
+Categorical variables in text format
 
-- Columns not directly suitable for analysis
+Columns not directly suitable for analysis
 
 Understanding the structure and quality of raw data was essential before moving forward.
 
-# 🧹 3. Data Cleaning & Feature Engineering (Python)
-Tools Used:
+🧹 3. Data Cleaning & Feature Engineering (Python)
+Tools Used
 
-- Python
-- Pandas
-- NumPy
+Python
 
-Key Steps:
+Pandas
+
+NumPy
+
+Key Steps
 3.1 Handling Missing Values
 
 Missing review ratings were filled using category-level median values to preserve realistic distributions.
@@ -67,95 +69,115 @@ Missing review ratings were filled using category-level median values to preserv
 New analytical features were created:
 
 Age Group
+
 Customers were grouped into quartiles:
 
-- Young Adult
-- Adult
-- Middle-aged
-- Senior
+Young Adult
+
+Adult
+
+Middle-aged
+
+Senior
 
 Purchase Frequency (Days)
+
 Textual frequencies (Weekly, Monthly, Annually, etc.) were converted into numeric day values.
 
 These transformations made the dataset analysis-ready and easier to interpret.
 
-# 🛢️ 4. Database Storage (MySQL)
+🛢️ 4. Database Storage (MySQL)
 
 After cleaning, the dataset was exported from the Python notebook and stored in MySQL.
 
 Why MySQL?
 
-- Simulates real-world production data storage
-- Enables scalable and efficient querying
-- Separates data processing from analytical querying
+Simulates real-world production data storage
+
+Enables scalable and efficient querying
+
+Separates data processing from analytical querying
 
 This step strengthened understanding of how analytics workflows integrate with databases in industry systems.
 
-## 🧮 5. SQL-Based Analysis
+🧮 5. SQL-Based Analysis
 
 SQL was used to answer the defined business questions directly at the database level.
 
-SQL Concepts Applied:
+SQL Concepts Applied
 
-- GROUP BY
-- AVG()
-- ORDER BY
-- LIMIT
+GROUP BY
 
-Sample Insights:
+AVG()
+
+ORDER BY
+
+LIMIT
+
+Sample Insights
 
 Identified Top 5 products based on average customer ratings
 
-- Analyzed revenue distribution by age group
-- Compared performance across product categories
-- SQL enabled fast, structured, and scalable analysis.
+Analyzed revenue distribution by age group
 
-## 📊 6. Visualization & Dashboarding (Power BI)
+Compared performance across product categories
+
+SQL enabled fast, structured, and scalable analysis.
+
+📊 6. Visualization & Dashboarding (Power BI)
 
 The analyzed data was visualized using Power BI to build an interactive dashboard.
 
-Dashboard Elements:
+Dashboard Elements
 
-- KPI Cards:
-- Average purchase amount
-- Average review rating
-- Total customers
-- Charts:
-- Revenue by age group
-- Revenue by category
-- Subscription status distribution
-- Average purchase amount by product
+KPI Cards
 
-Slicers:
-- Gender
-- Subscription status
-- Category
-- Payment method
-- Shipping type
+Average purchase amount
 
-Purpose:
+Average review rating
 
-- Improve data accessibility
-- Enable interactive exploration
-- Support data-driven business decisions
+Total customers
 
-## 🔍 7. Insights & Findings
+Charts
+
+Revenue by age group
+
+Revenue by category
+
+Subscription status distribution
+
+Average purchase amount by product
+
+Slicers
+
+Gender
+
+Subscription status
+
+Category
+
+Payment method
+
+Shipping type
+
+Purpose of Visualization
+
+Improve data accessibility
+
+Enable interactive exploration
+
+Support data-driven business decisions
+
+🔍 7. Insights & Findings
 
 Key insights derived from the analysis:
 
-- The majority of customers are non-subscribers, indicating strong potential for subscription growth
-- Young Adults contribute the highest share of revenue
-- Certain product categories significantly outperform others
-- High-value products present strong upselling opportunities
+The majority of customers are non-subscribers, indicating strong potential for subscription growth
+
+Young Adults contribute the highest share of revenue
+
+Certain product categories significantly outperform others
+
+High-value products present strong upselling opportunities
 
 These insights can directly inform marketing, pricing, and customer retention strategies.
-
-## 🎯 8. Key Learnings & Takeaways
-
-- Data analysis is a process, not just a collection of tools
-- Data cleaning is the most time-consuming yet critical stage
-- SQL is essential for structured, large-scale analysis
-- Visualizations are valuable only when paired with clear insights
-
-End-to-end projects provide deeper understanding than isolated exercises
-
